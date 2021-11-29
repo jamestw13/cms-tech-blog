@@ -15,7 +15,7 @@ Given a CMS-style blog site:
 - [ ] When I revisit the site at a later time and choose to sign in, then I am prompted to enter my username and password
 - [ ] When I am signed in to the site, then I see navigation links for the homepage, the dashboard, and the option to log out
 - [ ] When I click on the homepage option in the navigation, then I am taken to the homepage and presented with existing blog posts that include the post title and the date created
-- [ ] - [ ] When I click on an existing blog post, then I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
+- [ ] When I click on an existing blog post, then I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
 - [ ] When I enter a comment and click on the submit button while signed in, then the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
 - [ ] When I click on the dashboard option in the navigation, then I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
 - [ ] When I click on the button to add a new blog post, then I am prompted to enter both a title and contents for my blog post
