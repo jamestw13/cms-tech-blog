@@ -1,8 +1,12 @@
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection.js');
-// TODO: will require bcrypt for authentication
+const bcrypt = require('bcrypt');
 
-class User extends Model {}
+class User extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
 User.init(
   // Column Setup
