@@ -4,8 +4,9 @@ async function signupFormHandler(event) {
 
   const username = document.querySelector('#username-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
+  console.log(username, password);
 
-  if (username && password) {
+  if (username.length > 3 && username.length <= 20 && password.length > 3 && password.length <= 20) {
     const response = await fetch('/api/users', {
       method: 'post',
       body: JSON.stringify({
@@ -20,6 +21,8 @@ async function signupFormHandler(event) {
     } else {
       alert(response.statusText);
     }
+  } else {
+    alert('Username and password must be between 4 and 20 characters long');
   }
 }
 

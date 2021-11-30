@@ -14,11 +14,14 @@ Post.init(
     },
 
     title: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(50),
       allowNull: false,
+      validate: {
+        len: [1],
+      },
     },
     content: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(2000),
       allowNull: false,
       validate: {
         len: [1],
