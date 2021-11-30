@@ -4,6 +4,7 @@ const sequelize = require('../config/connection');
 class Post extends Model {}
 
 Post.init(
+  // Column Setup
   {
     id: {
       type: DataTypes.INTEGER,
@@ -31,6 +32,7 @@ Post.init(
       },
     },
   },
+  // Table Configuration
   {
     sequelize,
     freezeTableName: true,

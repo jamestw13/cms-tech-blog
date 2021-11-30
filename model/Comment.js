@@ -4,6 +4,7 @@ const sequelize = require('../config/connection.js');
 class Comment extends Model {}
 
 Comment.init(
+  // Column Setup
   {
     id: {
       type: DataTypes.INTEGER,
@@ -34,6 +35,7 @@ Comment.init(
       },
     },
   },
+  // Table Configuration
   {
     sequelize,
     timestamps: false,

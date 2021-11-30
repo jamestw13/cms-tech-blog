@@ -5,6 +5,7 @@ const sequelize = require('../config/connection.js');
 class User extends Model {}
 
 User.init(
+  // Column Setup
   {
     id: {
       type: DataTypes.INTEGER,
@@ -24,6 +25,7 @@ User.init(
       },
     },
   },
+  // Table Configuration
   {
     sequelize,
     timestamps: false,
