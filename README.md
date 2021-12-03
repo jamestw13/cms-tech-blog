@@ -2,11 +2,16 @@
 
 ## Description
 
+A web log for tech news. Sign in and write posts about the latest in technology information. Read what other people are saying. Share your ideas through comments.
+
 ### User Story
+
 As a developer who writes about tech, I want a CMS-style blog site so that I can publish articles, blog posts, and my thoughts and opinions.
 
 ### Acceptance Criteria
+
 Given a CMS-style blog site:
+
 - [x] When I visit the site for the first time, then I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
 - [x] When I click on the homepage option, then I am taken to the homepage
 - [x] When I click on any other links in the navigation, then I am prompted to either sign up or sign in
@@ -23,3 +28,18 @@ Given a CMS-style blog site:
 - [x] When I click on one of my existing posts in the dashboard, then I am able to delete or update my post and taken back to an updated dashboard
 - [x] When I click on the logout option in the navigation, then I am signed out of the site
 - [x] When I am idle on the site for more than a set time, then I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
+
+### Dependencies
+
+- bcrypt
+- connect-session-sequelize
+- dotenv
+- express
+- express-handlebars
+- express-session
+- mysql2
+- sequelize
+
+### Screenshot
+
+![Screenshot](https://github.com/jamestw13/cms-tech-blog/blob/main/The%20Tech%20Blog.png)
