@@ -1,29 +1,36 @@
-<form class='login-form'>
-  <div>
-    <label for='username-login'>username: </label>
-    <input type='text' id='username-login' />
-  </div>
-  <div>
-    <label for='password-login'>password: </label>
-    <input type='text' id='password-login' />
-  </div>
-  <div>
-    <button type='submit'>login</button>
-  </div>
-</form>
+<div class='login-page'>
 
-<form class='signup-form'>
-  <div>
-    <label for='username-signup'>username: </label>
-    <input type='text' id='username-signup' />
-  </div>
-  <div>
-    <label for='password-signup'>password: </label>
-    <input type='text' id='password-signup' />
-  </div>
-  <div>
-    <button type='submit'>signup</button>
-  </div>
-</form>
+  <form class='form login-form'>
+    <h2>Login to your account</h2>
+    <div>
+      <label for='username-login'>username: </label>
+      <input type='text' id='username-login' />
+    </div>
+    <div>
+      <label for='password-login'>password: </label>
+      <input type='text' id='password-login' />
+    </div>
+    <div>
+      <button type='submit'>login</button>
+    </div>
+  </form>
+
+  <h3>- OR -</h3>
+
+  <form class='form signup-form'>
+    <div>
+      <h2>Create an account</h2>
+      <label for='username-signup'>username: </label>
+      <input type='text' id='username-signup' />
+    </div>
+    <div>
+      <label for='password-signup'>password: </label>
+      <input type='text' id='password-signup' />
+    </div>
+    <div>
+      <button type='submit'>signup</button>
+    </div>
+  </form>
+</div>
 
 <script src='/javascript/login.js'></script>

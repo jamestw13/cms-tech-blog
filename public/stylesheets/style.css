@@ -1,3 +1,11 @@
+:root {
+  --light: #b7c0cc;
+  --dark: #202b40;
+  --secondary: #3a545e;
+  --tertiary: #474a4f;
+  --primary: #c3ffde;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,28 +16,31 @@ html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #333;
+  background-color: var(--dark);
+  color: var(--primary);
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: var(--dark);
   font-weight: bold;
   transition: color 0.1s;
 }
 
 a:hover {
-  color: #3486eb;
+  color: var(--secondary);
 }
 
 ol {
   list-style: none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
 }
 button {
-  background-color: #225ca3;
+  background-color: var(--dark);
   border: 0;
   padding: 1%;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   transition: background-color 0.1s;
   cursor: pointer;
@@ -37,7 +48,7 @@ button {
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: var(--secondary);
 }
 
 .post-list {
@@ -47,7 +58,9 @@ button:hover {
 
 textarea,
 input {
-  padding: 0.5%;
+  font-size: medium;
+  font-family: sans-serif;
+  padding: 0.75%;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
@@ -55,12 +68,20 @@ input {
 textarea:focus,
 input:focus {
   outline: none;
-  border: 1px solid #3486eb;
+  border: 1px solid var(--secondary);
 }
 
 textarea {
-  min-width: 40%;
-  min-height: 100px;
+  min-width: 80%;
+  min-height: 150px;
+}
+
+form {
+  padding: 3% 5%;
+  margin: 1%;
+  border-radius: 10px;
+  color: var(--secondary);
+  background-color: var(--primary);
 }
 
 form > div {
@@ -78,18 +99,28 @@ form label {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  background-color: var(--secondary);
 }
 
 header {
-  border-bottom: 1px solid #ccc;
+  background-color: var(--primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1%;
+  padding: 0 3%;
 }
 
 header h1 {
-  font-size: 1em;
+  font-size: 3em;
+}
+
+nav {
+  display: flex;
+}
+
+nav a,
+button {
+  padding: 1em;
 }
 
 main {
@@ -103,7 +134,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: var(--dark);
   font-size: 100%;
   font-weight: bold;
   transition: color 0.1s;
@@ -112,53 +143,78 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: var(--secondary);
+}
+
+.login-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .delete-post-btn {
-  background-color: #d41414;
+  background-color: var(--tertiary);
 }
 
 .delete-post-btn:hover {
-  background-color: #ff643d;
+  background-color: var(--secondary);
 }
 
 .post {
-  margin-bottom: 2%;
+  padding: 3% 5%;
+  margin: 1%;
+
+  border-radius: 10px;
   line-height: 150%;
+  background-color: var(--primary);
 }
 
-.post .title span {
-  font-style: italic;
-  font-size: 90%;
-  color: #7d7d7d;
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post .title {
+  font-size: 1.5em;
+  border-radius: 10px;
+  padding: 2%;
+  background-color: var(--secondary);
+}
+
+.post a {
+  color: var(--primary);
+}
+
+.post .body {
+  color: var(--secondary);
+  font-size: 1.1em;
+}
+
+.post .meta {
+  border-top: 1px solid var(--secondary);
+}
+
+.post .meta a {
+  color: var(--secondary);
 }
 
 .edit-link {
-  display: block;
-  margin: -1.5% 0 2% 0;
-}
-
-.upvote-btn {
-  background-color: #197d0f;
-  transition: background-color 0.1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
-}
-
-.comment-form {
-  margin-bottom: 5%;
+  font-size: 0.6em;
 }
 
 .comment {
-  padding: 1%;
+  padding: 2%;
   margin-bottom: 1%;
+  font-style: bold;
+  border-radius: 10px;
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color: var(--tertiary);
+}
+
+.comment:nth-child(even) {
+  background-color: var(--dark);
 }
 
 .comment .meta {
@@ -166,6 +222,10 @@ main {
   margin-bottom: 0.5%;
   opacity: 0.6;
 }
+
+/* .new-post-form {
+  margin-left: 3em;
+} */
 
 .new-post-form input {
   width: 300px;
@@ -176,9 +236,10 @@ main {
 }
 
 footer {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--primary);
   display: flex;
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+  color: var(--primary);
 }
